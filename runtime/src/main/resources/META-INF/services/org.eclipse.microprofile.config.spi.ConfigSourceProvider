@@ -1,0 +1,2 @@
+dev.sort.oss.quarkus.config.hocon.runtime.ApplicationHoconConfigSourceLoader$InFileSystem
+dev.sort.oss.quarkus.config.hocon.runtime.ApplicationHoconConfigSourceLoader$InClassPath

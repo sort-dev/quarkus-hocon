@@ -1,0 +1,6 @@
+foo2: {
+  bar: somethingElse
+}
+foo: {
+  baz: other
+}
