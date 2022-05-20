@@ -1,3 +1,6 @@
 foo: {
   baz: CCCC
 }
+express: {
+  bar: "${foo.bar}"
+}

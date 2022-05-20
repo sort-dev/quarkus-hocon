@@ -26,9 +26,18 @@ public class ApplicationHoconHotDeploymentTest {
                 .statusCode(200)
                 .body(is("CCCC"));
 
+        RestAssured.when().get("/express").then()
+                .statusCode(200)
+                .body(is("AAAA"));
+
         test.modifyResourceFile("application.conf", s -> s.replace("AAAA", "BBBB"));
 
         RestAssured.when().get("/foo").then()
+                .statusCode(200)
+                .body(is("BBBB"));
+
+
+        RestAssured.when().get("/express").then()
                 .statusCode(200)
                 .body(is("BBBB"));
 

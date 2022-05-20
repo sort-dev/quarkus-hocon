@@ -42,7 +42,11 @@ public class ApplicationHoconTest {
         assertEquals("something", ConfigProvider.getConfig().getValue("foo.bar", String.class));
         assertEquals("somethingElse", ConfigProvider.getConfig().getValue("foo2.bar", String.class));
         assertEquals("other", ConfigProvider.getConfig().getValue("foo.baz", String.class));
+
         assertTrue(ConfigProvider.getConfig().getValue("file.system", Boolean.class).booleanValue());
+
+        // the config source does not expand expressions, this happens at another layer
+        assertEquals("${foo2.bar}", ConfigProvider.getConfig().getValue("foo.expressed", String.class));
     }
 
     @AfterAll

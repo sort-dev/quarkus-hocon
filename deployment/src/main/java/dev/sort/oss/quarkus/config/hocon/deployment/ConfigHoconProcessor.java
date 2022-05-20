@@ -15,7 +15,7 @@ import java.util.List;
 
 public final class ConfigHoconProcessor {
 
-    public static final String CONFIG_HOCON = "CONFIG_HOCON";
+    public static final String CONFIG_HOCON = "hocon-config";
 
     @BuildStep
     public FeatureBuildItem feature() {

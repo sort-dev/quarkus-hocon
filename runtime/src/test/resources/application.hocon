@@ -3,4 +3,5 @@ foo2: {
 }
 foo: {
   baz: other
+  expressed: "${foo2.bar}"
 }

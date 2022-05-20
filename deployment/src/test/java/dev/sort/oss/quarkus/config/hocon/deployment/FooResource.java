@@ -16,6 +16,9 @@ public class FooResource {
     @ConfigProperty(name = "foo.baz")
     String fooBaz;
 
+    @ConfigProperty(name = "express.bar")
+    String expressBar;
+
     @Path("foo")
     @GET
     @Produces(MediaType.TEXT_PLAIN)
@@ -28,5 +31,12 @@ public class FooResource {
     @Produces(MediaType.TEXT_PLAIN)
     public String getBaz() {
         return fooBaz;
+    }
+
+    @Path("express")
+    @GET
+    @Produces(MediaType.TEXT_PLAIN)
+    public String getExpress() {
+        return expressBar;
     }
 }
